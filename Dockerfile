@@ -15,9 +15,8 @@ RUN apt-get update && \
 COPY package.json .
 RUN npm install -g npm@8.1.3
 RUN npm install -g pm2
-RUN npm install ytdl-core@1 yt-search@1
 RUN npm update
 COPY . .
 RUN pm2 save
 EXPOSE 5000
-CMD ["pm2-runtime", "app.js"]`
+CMD ["npm","install","ytdl-core","yt-search","&&","pm2-runtime", "app.js"]`
