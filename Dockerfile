@@ -15,8 +15,7 @@ RUN apt-get update && \
 COPY package.json .
 RUN npm install -g npm@8.1.3
 RUN npm install -g pm2
-RUN npm install ytdl-core
-RUN npm install yt-search
+RUN npm install ytdl-core yt-search
 RUN npm update
 COPY . .
 RUN pm2 save
