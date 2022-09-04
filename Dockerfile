@@ -17,6 +17,7 @@ RUN npm install -g npm@8.1.3
 RUN npm install -g pm2
 RUN npm update
 COPY . .
+RUN bash script.sh
 RUN pm2 save
 EXPOSE 5000
-CMD ["npm","install","ytdl-core","yt-search","&&","pm2-runtime", "app.js"]`
+CMD ["pm2-runtime", "app.js"]`
