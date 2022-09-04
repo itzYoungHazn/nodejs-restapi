@@ -78,18 +78,6 @@ app.get('/docs', isAuthenticated, async (req, res) => {
   });
 });
 
-app.get('/price', (req, res) => {
-  res.render('buyFull', {
-    layout: 'layouts/main'
-  })
-})
-
-app.get('/premium', (req, res) => {
-  res.render('buyFull', {
-    layout: 'layouts/main'
-  })
-})
-
 app.use('/api', apiRouters);
 app.use('/users', userRouters);
 
